@@ -9,21 +9,21 @@ from sklearn.linear_model import LinearRegression
 df = pd.read_csv("car_data.csv", header=0)
 df.drop('Trim', axis=1, inplace=True)
 
-make_dummies = pd.get_dummies(df['Make'], prefix='Make')
-df = df.join(make_dummies.ix[:, 'Make_2':])
+df_make = pd.get_dummies(df['Make'], prefix='Make')
+df = pd.concat([df, df_make], axis=1)
 df.drop('Make', axis=1, inplace=True)
 
-make_dummies = pd.get_dummies(df['Model'], prefix='Model')
-df = df.join(make_dummies.ix[:, 'Model_2':])
+df_model = pd.get_dummies(df['Model'], prefix='Model')
+df = pd.concat([df, df_model], axis=1)
 df.drop('Model', axis=1, inplace=True)
 
-make_dummies = pd.get_dummies(df['Type'], prefix='Type')
-df = df.join(make_dummies.ix[:, 'Type_2':])
+df_type = pd.get_dummies(df['Type'], prefix='Type')
+df = pd.concat([df, df_type], axis=1)
 df.drop('Type', axis=1, inplace=True)
 
 
 def print_task_three_one():
-    print(df.columns)
+    print(list(df.columns))
 
 s = df['Price']
 df.drop('Price', axis=1, inplace=True)
@@ -53,3 +53,50 @@ def print_task_three_two_a(model):
 
 def print_task_three_two_b(model, X, y):
     print('\nCoefficient of determination: {0:.2f}'.format(model.score(X, y)))
+
+
+def missing_lit():
+    df.drop('Liter', axis=1, inplace=True)
+    model = LinearRegression()
+    X = np.array(df.values)
+    y = s.values
+    model.fit(X, y)
+    print('R^2 no Liter: {0:.2f}'.format(model.score(X, y)))
+
+
+def missing_lit_sou():
+    df.drop('Sound', axis=1, inplace=True)
+    model = LinearRegression()
+    X = np.array(df.values)
+    y = s.values
+    model.fit(X, y)
+    print('R^2 no Liter/Sound: {0:.2f}'.format(model.score(X, y)))
+
+
+def missing_lit_sou_doo():
+    df.drop('Doors', axis=1, inplace=True)
+    model = LinearRegression()
+    X = np.array(df.values)
+    y = s.values
+    model.fit(X, y)
+    print('R^2 no Liter/Sound/Doors: {0:.2f}'.format(model.score(X, y)))
+
+
+def missing_lit_sou_doo_mil():
+    df.drop('Mileage', axis=1, inplace=True)
+    model = LinearRegression()
+    X = np.array(df.values)
+    y = s.values
+    model.fit(X, y)
+    print('R^2 no Liter/Sound/Doors/Mileage: {0:.2f}'
+          .format(model.score(X, y)))
+
+
+def missing_lit_sou_doo_mil_lea():
+    df.drop('Leather', axis=1, inplace=True)
+    model = LinearRegression()
+    X = np.array(df.values)
+    y = s.values
+    model.fit(X, y)
+    print('R^2 no Liter/Sound/Doors/Mileage/Leather: {0:.2f}'
+          .format(model.score(X, y)))

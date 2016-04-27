@@ -54,7 +54,6 @@ def print_task_two_three():
     missing_lit_cyl()
 
 
-
 def missing_lit_mil():
     x_list = ['Cylinder', 'Doors',
               'Cruise', 'Sound', 'Leather']
@@ -62,7 +61,7 @@ def missing_lit_mil():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Liter/Mileage: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Liter/Mileage: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_lit_cyl():
@@ -72,7 +71,7 @@ def missing_lit_cyl():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Liter/Cylinder: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Liter/Cylinder: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_lit_doo():
@@ -82,7 +81,7 @@ def missing_lit_doo():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Liter/Doors: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Liter/Doors: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_lit_cru():
@@ -92,7 +91,7 @@ def missing_lit_cru():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Liter/Cruise: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Liter/Cruise: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_lit_sou():
@@ -102,7 +101,7 @@ def missing_lit_sou():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Liter/Sound: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Liter/Sound: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_lit_lea():
@@ -112,7 +111,7 @@ def missing_lit_lea():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Liter/Leather: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Liter/Leather: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_leather():
@@ -122,7 +121,7 @@ def missing_leather():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Leather: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Leather: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_sound():
@@ -132,7 +131,7 @@ def missing_sound():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Sound: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Sound: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_cruise():
@@ -142,7 +141,7 @@ def missing_cruise():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Cruise: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Cruise: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_doors():
@@ -152,7 +151,7 @@ def missing_doors():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Doors: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Doors: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_liter():
@@ -162,7 +161,7 @@ def missing_liter():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Liter: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Liter: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_cylinder():
@@ -172,7 +171,7 @@ def missing_cylinder():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Cylinder: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Cylinder: {0:.2f}'.format(model.score(X, y)))
 
 
 def missing_mileage():
@@ -182,7 +181,7 @@ def missing_mileage():
     X = np.array(df[x_list].values)
     y = df['Price'].values
     model.fit(X, y)
-    print('R**2 no Mileage: {0:.2f}'.format(model.score(X, y)))
+    print('R^2 no Mileage: {0:.2f}'.format(model.score(X, y)))
 
     # plt.scatter(X, y, color='b')
     # plt.plot(X, model.predict(X), color='r', linewidth=2)

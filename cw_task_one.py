@@ -7,8 +7,6 @@ from sklearn.linear_model import LinearRegression
 
 
 df = pd.read_csv("car_data.csv", header=0)
-# plt.xticks((14, 15, 16, 17, 18, 19, 20))
-# plt.yticks((65, 70, 75, 80, 85, 90, 95, 100))
 
 
 def calc_task_one_one():
