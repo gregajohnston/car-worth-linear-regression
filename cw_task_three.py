@@ -100,3 +100,23 @@ def missing_lit_sou_doo_mil_lea():
     model.fit(X, y)
     print('R^2 no Liter/Sound/Doors/Mileage/Leather: {0:.2f}'
           .format(model.score(X, y)))
+
+
+def missing_lit_sou_doo_mil_lea_cru():
+    df.drop('Cruise', axis=1, inplace=True)
+    model = LinearRegression()
+    X = np.array(df.values)
+    y = s.values
+    model.fit(X, y)
+    print('R^2 no Liter/Sound/Doors/Mileage/Leather/Cruise: {0:.2f}'
+          .format(model.score(X, y)))
+
+
+def missing_lit_sou_doo_mil_lea_cru_cyl():
+    df.drop('Cylinder', axis=1, inplace=True)
+    model = LinearRegression()
+    X = np.array(df.values)
+    y = s.values
+    model.fit(X, y)
+    print('R^2 only dummies: {0:.2f}'
+          .format(model.score(X, y)))
