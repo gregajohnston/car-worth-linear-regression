@@ -1,11 +1,10 @@
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
-import seaborn
 import warnings
-from sklearn.preprocessing import PolynomialFeatures
+
 from sklearn.linear_model import LinearRegression
-from sklearn.pipeline import Pipeline
+
 
 df = pd.read_csv("car_data.csv", header=0)
 # plt.xticks((14, 15, 16, 17, 18, 19, 20))
